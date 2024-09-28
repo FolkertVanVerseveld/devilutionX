@@ -4824,7 +4824,7 @@ void RepairItem(Item &item, int lvl)
 	int rep = 0;
 	do {
 		rep += lvl + GenerateRnd(lvl);
-		item._iMaxDur -= std::max(item._iMaxDur / (lvl + 9), 1);
+		//item._iMaxDur -= std::max(item._iMaxDur / (lvl + 9), 1);
 		if (item._iMaxDur == 0) {
 			item.clear();
 			return;
@@ -4846,7 +4846,7 @@ void RechargeItem(Item &item, Player &player)
 	r = GenerateRnd(player._pLevel / r) + 1;
 
 	do {
-		item._iMaxCharges--;
+		//item._iMaxCharges--;
 		if (item._iMaxCharges == 0) {
 			return;
 		}

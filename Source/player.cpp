@@ -2705,7 +2705,7 @@ StartPlayerKill(Player &player, DeathReason deathReason)
 	}
 
 	const bool dropGold = !gbIsMultiplayer || !(player.isOnLevel(16) || player.isOnArenaLevel());
-	const bool dropItems = dropGold && deathReason == DeathReason::MonsterOrTrap;
+	const bool dropItems = false;//dropGold &&deathReason == DeathReason::MonsterOrTrap; // <
 	const bool dropEar = dropGold && deathReason == DeathReason::Player;
 
 	player.Say(HeroSpeech::AuughUh);
